@@ -144,8 +144,8 @@ export default class TransactionScreen extends Component {
       transactionType = false;
     } else {
       bookRef.docs.map(doc => {
-        //Si el libro está disponible, entonces el tipo de transacción se enviará.
-        //Si no, se devolverá.
+        //Si el libro está disponible, entonces el tipo de transacción será "issue".
+        //Si no, será "return".
         transactionType = doc.data().is_book_available ? "issue" : "return";
       });
     }
